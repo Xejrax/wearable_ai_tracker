@@ -1,0 +1,58 @@
+{
+  "name": "wearable-ai-tracker",
+  "version": "1.0.0",
+  "description": "An interactive application for tracking wearable AI technologies",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "author": "Manus AI",
+  "license": "MIT",
+  "build": {
+    "appId": "com.manus.wearableaitracker",
+    "productName": "Wearable AI Tracker",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/assets/icon.png"
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "electron": "^28.1.0",
+    "electron-builder": "^24.6.4",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "framer-motion": "^10.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "recharts": "^2.7.2",
+    "uuid": "^9.0.0"
+  }
+}
